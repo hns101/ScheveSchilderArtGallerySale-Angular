@@ -1,0 +1,88 @@
+<div class="modal-backdrop" (click)="onBackdropClick($event)">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h2 class="modal-title">{{ 'modal.title' | translate }}</h2>
+      <button class="close-button" (click)="onClose()" aria-label="Close">
+        ×
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <!-- Artwork Info -->
+      <div class="artwork-summary">
+        <img
+          [src]="'assets/images/' + artwork.mainImage"
+          [alt]="artwork.title"
+          class="artwork-thumbnail">
+        <div class="artwork-details">
+          <h3>{{ artwork.title }}</h3>
+          <p>{{ 'modal.by' | translate }} {{ artwork.artist }}</p>
+          <p class="price">€{{ artwork.price }}</p>
+        </div>
+      </div>
+
+      <!-- Process Description -->
+      <div class="process-description">
+        <p>{{ 'modal.processDescription' | translate }}</p>
+      </div>
+
+      <!-- Purchase Form -->
+      <form [formGroup]="purchaseForm" (ngSubmit)="onSubmit()" class="purchase-form">
+        <div class="form-group">
+          <label for="name">{{ 'modal.form.name' | translate }} *</label>
+          <input
+            type="text"
+            id="name"
+            formControlName="name"
+            class="form-control"
+            [class.error]="purchaseForm.get('name')?.invalid && purchaseForm.get('name')?.touched"
+            [placeholder]="'modal.form.namePlaceholder' | translate">
+          <div class="error-message" *ngIf="getFieldError('name')">
+            {{ getFieldError('name') }}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">{{ 'modal.form.email' | translate }} *</label>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            class="form-control"
+            [class.error]="purchaseForm.get('email')?.invalid && purchaseForm.get('email')?.touched"
+            [placeholder]="'modal.form.emailPlaceholder' | translate">
+          <div class="error-message" *ngIf="getFieldError('email')">
+            {{ getFieldError('email') }}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">{{ 'modal.form.address' | translate }} *</label>
+          <textarea
+            id="address"
+            formControlName="address"
+            class="form-control textarea"
+            rows="3"
+            [class.error]="purchaseForm.get('address')?.invalid && purchaseForm.get('address')?.touched"
+            [placeholder]="'modal.form.addressPlaceholder' | translate">
+          </textarea>
+          <div class="error-message" *ngIf="getFieldError('address')">
+            {{ getFieldError('address') }}
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn-secondary" (click)="onClose()">
+            {{ 'modal.cancel' | translate }}
+          </button>
+          <button
+            type="submit"
+            class="btn-primary"
+            [disabled]="!purchaseForm.valid">
+            {{ 'modal.sendWhatsApp' | translate }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
