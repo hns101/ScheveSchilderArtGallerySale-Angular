@@ -135,3 +135,86 @@
   border-top: 1px solid #eee;
   padding-top: 30px;
 }
+
+.price-buy-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.price {
+  font-size: 2em;
+  font-weight: 700;
+  color: #28a745;
+}
+
+.buy-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+}
+
+.buy-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+}
+
+.status-message {
+  text-align: center;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.status-badge.sold {
+  background-color: #dc3545;
+  color: white;
+}
+
+.status-badge.not-for-sale {
+  background-color: #6c757d;
+  color: white;
+}
+
+.loading {
+  text-align: center;
+  padding: 50px;
+  font-size: 1.2em;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .artwork-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .artwork-info {
+    position: static;
+    padding: 25px;
+  }
+
+  .artwork-title {
+    font-size: 1.8em;
+  }
+
+  .thumbnails {
+    justify-content: center;
+  }
+}
