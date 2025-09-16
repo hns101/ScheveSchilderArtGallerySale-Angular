@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "gallery": "Gallery",
+    "about": "About"
+  },
+  "gallery": {
+    "title": "Art Gallery",
+    "subtitle": "Discover the unique and vibrant world of Scheve Schilder's artwork"
+  },
+  "artwork": {
+    "sold": "Sold",
+    "notForSale": "Not For Sale"
+  },
+  "detail": {
+    "backToGallery": "Back to Gallery",
+    "by": "by",
+    "dimensions": "Dimensions",
+    "material": "Material",
+    "buyNow": "Buy Now"
+  },
+  "modal": {
+    "title": "Purchase Artwork",
+    "by": "by",
+    "processDescription": "Fill in your details and click 'Send via WhatsApp'. Wait for a response from the artist, who will send you an invoice based on shipping costs and a payment link. Once payment is completed, the artist will ship the artwork to you.",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "address": "Shipping Address",
+      "addressPlaceholder": "Enter your complete shipping address"
+    },
+    "cancel": "Cancel",
+    "sendWhatsApp": "Send via WhatsApp",
+    "errors": {
+      "name": {
+        "required": "Name is required",
+        "minLength": "Name must be at least 2 characters"
+      },
+      "email": {
+        "required": "Email is required",
+        "invalid": "Please enter a valid email address"
+      },
+      "address": {
+        "required": "Address is required",
+        "minLength": "Please enter a complete address"
+      }
+    }
+  },
+  "footer": {
+    "contact": "Contact",
+    "artist": "Artist",
+    "followUs": "Follow Us",
+    "allRightsReserved": "All rights reserved"
+  },
+  "about": {
+    "title": "About the Artist",
+    "subtitle": "Discover the story behind Scheve Schilder's unique artistic journey",
+    "story": {
+      "title": "My Story",
+      "paragraph1": "Welcome to my artistic world! I'm Scheve Schilder, a passionate artist from the Netherlands. My journey began many years ago with a simple love for colors and the desire to capture the beauty I see in everyday moments.",
+      "paragraph2": "Through my work, I aim to bring joy and inspiration to people's lives. Each piece tells a story, whether it's the golden light of a Dutch countryside morning or the vibrant energy of Amsterdam's bustling streets."
+    },
+    "style": {
+      "title": "My Artistic Style",
+      "description": "My work spans various mediums including oil paintings, watercolors, and mixed media. I'm particularly drawn to landscapes and urban scenes that capture the essence of Dutch life and culture. My style blends traditional techniques with contemporary vision, creating pieces that are both timeless and fresh."
+    },
+    "contact": {
+      "title": "Get in Touch",
+      "email": "Email",
+      "location": "Location",
+      "netherlands": "The Netherlands"
+    },
+    "backToGallery": "Back to Gallery"
+  },
+  "common": {
+    "loading": "Loading"
+  }
+}
