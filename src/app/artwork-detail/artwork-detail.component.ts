@@ -1,12 +1,18 @@
+// src/app/artwork-detail/artwork-detail.component.ts
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { DataService } from '../core/services/data.service';
 import { TranslationService } from '../core/services/translation.service';
+import { TranslatePipe } from '../shared/pipes/translate.pipe';
+import { ModalComponent } from '../shared/components/modal/modal.component';
 import { Artwork } from '../core/models/artwork.model';
 
 @Component({
   selector: 'app-artwork-detail',
+  standalone: true,
+  imports: [CommonModule, TranslatePipe, ModalComponent],
   templateUrl: './artwork-detail.component.html',
   styleUrls: ['./artwork-detail.component.css']
 })

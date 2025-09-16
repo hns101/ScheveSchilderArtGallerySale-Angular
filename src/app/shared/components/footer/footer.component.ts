@@ -1,7 +1,11 @@
+// src/app/shared/components/footer/footer.component.ts
 import { Component } from '@angular/core';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 @Component({
   selector: 'app-footer',
+  standalone: true,
+  imports: [TranslatePipe],
   template: `
     <footer class="footer">
       <div class="container">

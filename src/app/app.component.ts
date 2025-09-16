@@ -1,8 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
 import { TranslationService } from './core/services/translation.service';
 
 @Component({
   selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, HeaderComponent, FooterComponent],
   template: `
     <div class="app">
       <app-header></app-header>
@@ -63,32 +68,6 @@ import { TranslationService } from './core/services/translation.service';
       }
 
       img {
-        max-width: 100%;
-        height: auto;
-      }
-
-      /* Utility Classes */
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      .text-center {
-        text-align: center;
-      }
-
-      .mb-20 {
-        margin-bottom: 20px;
-      }
-
-      .mt-20 {
-        margin-top: 20px;
-      }
-
-      /* Responsive Images */
-      .img-responsive {
-        display: block;
         max-width: 100%;
         height: auto;
       }

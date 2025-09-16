@@ -1,8 +1,13 @@
+// src/app/about/about.component.ts
 import { Component, OnInit } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslationService } from '../core/services/translation.service';
+import { TranslatePipe } from '../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-about',
+  standalone: true,
+  imports: [RouterLink, TranslatePipe],
   template: `
     <div class="about-container">
       <div class="about-hero">

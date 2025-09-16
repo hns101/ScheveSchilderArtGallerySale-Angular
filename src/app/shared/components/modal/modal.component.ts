@@ -1,11 +1,16 @@
+// src/app/shared/components/modal/modal.component.ts
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { TranslationService } from '../../../core/services/translation.service';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 import { Artwork } from '../../../core/models/artwork.model';
 import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-modal',
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule, TranslatePipe],
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css']
 })

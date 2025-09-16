@@ -1,3 +1,4 @@
+<!-- src/app/artwork-detail/artwork-detail.component.html -->
 <div class="artwork-detail-container" *ngIf="artwork$ | async as artwork">
   <div class="back-button-container">
     <button class="back-button" (click)="goBack()">
@@ -41,7 +42,7 @@
       </div>
 
       <div class="artwork-description">
-        <p>{{ artwork.description[currentLanguage] }}</p>
+        <p>{{ currentLanguage === 'nl' ? artwork.description.nl : artwork.description.en }}</p>
       </div>
 
       <div class="artwork-specifications">

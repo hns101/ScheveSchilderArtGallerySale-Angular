@@ -1,3 +1,4 @@
+<!-- src/app/gallery/gallery.component.html -->
 <div class="gallery-container">
   <div class="hero-section">
     <h1 class="gallery-title">{{ 'gallery.title' | translate }}</h1>
@@ -30,7 +31,7 @@
         <h3 class="artwork-title">{{ artwork.title }}</h3>
         <p class="artwork-artist">{{ artwork.artist }}</p>
         <p class="artwork-description">
-          {{ artwork.description[currentLanguage] }}
+          {{ currentLanguage === 'nl' ? artwork.description.nl : artwork.description.en }}
         </p>
 
         <div class="artwork-details">
