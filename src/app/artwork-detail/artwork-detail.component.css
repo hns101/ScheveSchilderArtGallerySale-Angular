@@ -1,0 +1,137 @@
+.artwork-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.back-button-container {
+  margin-bottom: 30px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 8px 0;
+}
+
+.back-button:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.artwork-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.artwork-images {
+  width: 100%;
+}
+
+.main-image-container {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.thumbnails {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+  border-color: #007bff;
+  transform: scale(1.05);
+}
+
+.thumbnail.active {
+  border-color: #007bff;
+  box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+}
+
+.artwork-info {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 100px;
+}
+
+.artwork-header {
+  margin-bottom: 30px;
+}
+
+.artwork-title {
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.artwork-artist {
+  font-size: 1.2em;
+  color: #666;
+  font-style: italic;
+}
+
+.artwork-description {
+  margin-bottom: 30px;
+}
+
+.artwork-description p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.05em;
+}
+
+.artwork-specifications {
+  margin-bottom: 40px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.spec-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.spec-value {
+  color: #666;
+}
+
+.purchase-section {
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+}

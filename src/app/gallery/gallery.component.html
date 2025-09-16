@@ -1,0 +1,45 @@
+<div class="gallery-container">
+  <div class="hero-section">
+    <h1 class="gallery-title">{{ 'gallery.title' | translate }}</h1>
+    <p class="gallery-subtitle">{{ 'gallery.subtitle' | translate }}</p>
+  </div>
+
+  <div class="artworks-grid">
+    <div
+      class="artwork-card"
+      *ngFor="let artwork of artworks$ | async"
+      [routerLink]="['/artworks', artwork.id]">
+
+      <div class="artwork-image-container">
+        <img
+          [src]="'assets/images/' + artwork.mainImage"
+          [alt]="artwork.title"
+          class="artwork-image"
+          loading="lazy">
+
+        <!-- Status badges -->
+        <div class="artwork-status" *ngIf="artwork.sold">
+          <span class="badge sold">{{ 'artwork.sold' | translate }}</span>
+        </div>
+        <div class="artwork-status" *ngIf="artwork.notForSale && !artwork.sold">
+          <span class="badge not-for-sale">{{ 'artwork.notForSale' | translate }}</span>
+        </div>
+      </div>
+
+      <div class="artwork-info">
+        <h3 class="artwork-title">{{ artwork.title }}</h3>
+        <p class="artwork-artist">{{ artwork.artist }}</p>
+        <p class="artwork-description">
+          {{ artwork.description[currentLanguage] }}
+        </p>
+
+        <div class="artwork-details">
+          <span class="artwork-dimensions">{{ artwork.dimensions }}</span>
+          <span class="artwork-price" [ngClass]="{'available': isPurchasable(artwork)}">
+            {{ getPrice(artwork) }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

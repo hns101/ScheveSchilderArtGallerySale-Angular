@@ -1,0 +1,90 @@
+<div class="artwork-detail-container" *ngIf="artwork$ | async as artwork">
+  <div class="back-button-container">
+    <button class="back-button" (click)="goBack()">
+      ← {{ 'detail.backToGallery' | translate }}
+    </button>
+  </div>
+
+  <div class="artwork-content">
+    <div class="artwork-images">
+      <!-- Main Image -->
+      <div class="main-image-container">
+        <img
+          [src]="'assets/images/' + selectedImage"
+          [alt]="artwork.title"
+          class="main-image">
+      </div>
+
+      <!-- Thumbnail Gallery -->
+      <div class="thumbnails" *ngIf="artwork.detailImages.length > 0">
+        <img
+          [src]="'assets/images/' + artwork.mainImage"
+          [alt]="artwork.title + ' - main'"
+          class="thumbnail"
+          [class.active]="selectedImage === artwork.mainImage"
+          (click)="selectImage(artwork.mainImage)">
+
+        <img
+          *ngFor="let image of artwork.detailImages"
+          [src]="'assets/images/' + image"
+          [alt]="artwork.title + ' - detail'"
+          class="thumbnail"
+          [class.active]="selectedImage === image"
+          (click)="selectImage(image)">
+      </div>
+    </div>
+
+    <div class="artwork-info">
+      <div class="artwork-header">
+        <h1 class="artwork-title">{{ artwork.title }}</h1>
+        <p class="artwork-artist">{{ 'detail.by' | translate }} {{ artwork.artist }}</p>
+      </div>
+
+      <div class="artwork-description">
+        <p>{{ artwork.description[currentLanguage] }}</p>
+      </div>
+
+      <div class="artwork-specifications">
+        <div class="spec-item">
+          <span class="spec-label">{{ 'detail.dimensions' | translate }}:</span>
+          <span class="spec-value">{{ artwork.dimensions }}</span>
+        </div>
+        <div class="spec-item">
+          <span class="spec-label">{{ 'detail.material' | translate }}:</span>
+          <span class="spec-value">{{ artwork.material }}</span>
+        </div>
+      </div>
+
+      <div class="purchase-section">
+        <!-- Price and Buy Button -->
+        <div *ngIf="canPurchase(artwork)" class="price-buy-container">
+          <div class="price">€{{ artwork.price }}</div>
+          <button class="buy-button" (click)="openModal()">
+            {{ 'detail.buyNow' | translate }}
+          </button>
+        </div>
+
+        <!-- Status Messages -->
+        <div *ngIf="!canPurchase(artwork)" class="status-message">
+          <span class="status-badge" [ngClass]="{
+            'sold': artwork.sold,
+            'not-for-sale': artwork.notForSale
+          }">
+            {{ getStatusText(artwork) }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Component -->
+  <app-modal
+    *ngIf="showModal"
+    [artwork]="artwork"
+    (closeModal)="closeModal()">
+  </app-modal>
+</div>
+
+<div class="loading" *ngIf="!(artwork$ | async)">
+  {{ 'common.loading' | translate }}...
+</div>

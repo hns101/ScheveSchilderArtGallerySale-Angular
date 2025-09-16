@@ -1,0 +1,157 @@
+.gallery-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero-section {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 40px 0;
+}
+
+.gallery-title {
+  font-size: 3em;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 300;
+}
+
+.gallery-subtitle {
+  font-size: 1.2em;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.artworks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.artwork-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.artwork-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.artwork-image-container {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.artwork-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.artwork-card:hover .artwork-image {
+  transform: scale(1.05);
+}
+
+.artwork-status {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge.sold {
+  background-color: #dc3545;
+  color: white;
+}
+
+.badge.not-for-sale {
+  background-color: #6c757d;
+  color: white;
+}
+
+.artwork-info {
+  padding: 25px;
+}
+
+.artwork-title {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.artwork-artist {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.artwork-description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.95em;
+}
+
+.artwork-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.artwork-dimensions {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.artwork-price {
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #666;
+}
+
+.artwork-price.available {
+  color: #28a745;
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    padding: 15px;
+  }
+
+  .gallery-title {
+    font-size: 2.2em;
+  }
+
+  .artworks-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .artwork-image-container {
+    height: 250px;
+  }
+}
