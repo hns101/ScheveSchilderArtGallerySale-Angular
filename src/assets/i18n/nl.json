@@ -1,4 +1,3 @@
-
 {
   "nav": {
     "gallery": "Galerij",
@@ -12,59 +11,17 @@
     "sold": "Verkocht",
     "notForSale": "Niet Te Koop"
   },
-  "detail": {
-    "backToGallery": "Terug naar Galerij",
-    "by": "door",
-    "dimensions": "Afmetingen",
-    "material": "Materiaal",
-    "buyNow": "Koop Nu"
-  },
-  "modal": {
-    "title": "Kunstwerk Kopen",
-    "by": "door",
-    "processDescription": "U vult uw adresgegevens in en klikt op 'Verzenden via WhatsApp'. Wacht op een antwoord van de kunstenaar, die u een factuur zal sturen op basis van de verzendkosten en een betalingslink. Zodra de betaling is voltooid, zal de kunstenaar het kunstwerk naar u opsturen.",
-    "form": {
-      "name": "Volledige Naam",
-      "namePlaceholder": "Voer uw volledige naam in",
-      "email": "E-mailadres",
-      "emailPlaceholder": "Voer uw e-mailadres in",
-      "address": "Verzendadres",
-      "addressPlaceholder": "Voer uw complete verzendadres in"
-    },
-    "cancel": "Annuleren",
-    "sendWhatsApp": "Verzenden via WhatsApp",
-    "errors": {
-      "name": {
-        "required": "Naam is verplicht",
-        "minLength": "Naam moet minstens 2 karakters bevatten"
-      },
-      "email": {
-        "required": "E-mail is verplicht",
-        "invalid": "Voer een geldig e-mailadres in"
-      },
-      "address": {
-        "required": "Adres is verplicht",
-        "minLength": "Voer een volledig adres in"
-      }
-    }
-  },
-  "footer": {
-    "contact": "Contact",
-    "artist": "Kunstenaar",
-    "followUs": "Volg Ons",
-    "allRightsReserved": "Alle rechten voorbehouden"
-  },
   "about": {
     "title": "Over de Kunstenaar",
     "subtitle": "Ontdek het verhaal achter Scheve Schilder's unieke artistieke reis",
     "story": {
       "title": "Mijn Verhaal",
-      "paragraph1": "Welkom in mijn artistieke wereld! Ik ben Scheve Schilder, een gepassioneerde kunstenaar uit Nederland. Mijn reis begon vele jaren geleden met een eenvoudige liefde voor kleuren en het verlangen om de schoonheid vast te leggen die ik zie in alledaagse momenten.",
-      "paragraph2": "Door mijn werk probeer ik vreugde en inspiratie te brengen in het leven van mensen. Elk stuk vertelt een verhaal, of het nu gaat om het gouden licht van een Nederlandse plattelandsochtend of de levendige energie van Amsterdam's bruisende straten."
+      "paragraph1": "Welkom in mijn artistieke wereld! Ik ben Scheve Schilder, een gepassioneerde kunstenaar uit Nederland.",
+      "paragraph2": "Door mijn werk probeer ik vreugde en inspiratie te brengen in het leven van mensen."
     },
     "style": {
       "title": "Mijn Artistieke Stijl",
-      "description": "Mijn werk omvat verschillende media, waaronder olieverfschilderijen, aquarellen en mixed media. Ik voel me bijzonder aangetrokken tot landschappen en stedelijke taferelen die de essentie van het Nederlandse leven en cultuur vastleggen. Mijn stijl combineert traditionele technieken met een hedendaagse visie, waardoor stukken ontstaan die zowel tijdloos als fris zijn."
+      "description": "Mijn werk omvat verschillende media, waaronder olieverfschilderijen, aquarellen en mixed media."
     },
     "contact": {
       "title": "Neem Contact Op",
@@ -74,7 +31,10 @@
     },
     "backToGallery": "Terug naar Galerij"
   },
-  "common": {
-    "loading": "Laden"
+  "footer": {
+    "contact": "Contact",
+    "artist": "Kunstenaar",
+    "followUs": "Volg Ons",
+    "allRightsReserved": "Alle rechten voorbehouden"
   }
 }
