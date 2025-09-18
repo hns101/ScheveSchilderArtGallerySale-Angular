@@ -1,3 +1,4 @@
+/* src/app/artwork-detail/artwork-detail.component.css */
 .artwork-detail-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -11,15 +12,15 @@
 .back-button {
   background: none;
   border: none;
-  color: #007bff;
+  color: var(--color-primary);
   font-size: 1em;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: color var(--transition);
   padding: 8px 0;
 }
 
 .back-button:hover {
-  color: #0056b3;
+  color: var(--color-primary-dark);
   text-decoration: underline;
 }
 
@@ -37,9 +38,9 @@
 .main-image-container {
   width: 100%;
   margin-bottom: 20px;
-  border-radius: 12px;
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  box-shadow: var(--shadow-lg);
 }
 
 .main-image {
@@ -58,27 +59,27 @@
   width: 80px;
   height: 80px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   cursor: pointer;
   border: 3px solid transparent;
-  transition: all 0.3s ease;
+  transition: all var(--transition);
 }
 
 .thumbnail:hover {
-  border-color: #007bff;
+  border-color: var(--color-primary);
   transform: scale(1.05);
 }
 
 .thumbnail.active {
-  border-color: #007bff;
-  box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
 }
 
 .artwork-info {
-  background: white;
+  background: var(--bg-card);
   padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
   position: sticky;
   top: 100px;
 }
@@ -89,14 +90,14 @@
 
 .artwork-title {
   font-size: 2.2em;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 10px;
   font-weight: 600;
 }
 
 .artwork-artist {
   font-size: 1.2em;
-  color: #666;
+  color: var(--text-secondary);
   font-style: italic;
 }
 
@@ -105,14 +106,14 @@
 }
 
 .artwork-description p {
-  color: #555;
+  color: var(--text-secondary);
   line-height: 1.8;
   font-size: 1.05em;
 }
 
 .artwork-specifications {
   margin-bottom: 40px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-color);
   padding-top: 20px;
 }
 
@@ -124,15 +125,15 @@
 
 .spec-label {
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .spec-value {
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .purchase-section {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-color);
   padding-top: 30px;
 }
 
@@ -146,27 +147,27 @@
 .price {
   font-size: 2em;
   font-weight: 700;
-  color: #28a745;
+  color: var(--status-available);
 }
 
 .buy-button {
-  background-color: #007bff;
-  color: white;
+  background-color: var(--button-primary);
+  color: var(--text-light);
   border: none;
   padding: 15px 30px;
   font-size: 1.1em;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all var(--transition);
   width: 100%;
   max-width: 200px;
 }
 
 .buy-button:hover {
-  background-color: #0056b3;
+  background-color: var(--button-primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
 }
 
 .status-message {
@@ -176,27 +177,27 @@
 .status-badge {
   display: inline-block;
   padding: 12px 25px;
-  border-radius: 25px;
+  border-radius: var(--radius-xl);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 .status-badge.sold {
-  background-color: #dc3545;
-  color: white;
+  background-color: var(--status-sold);
+  color: var(--text-light);
 }
 
 .status-badge.not-for-sale {
-  background-color: #6c757d;
-  color: white;
+  background-color: var(--status-unavailable);
+  color: var(--text-light);
 }
 
 .loading {
   text-align: center;
   padding: 50px;
   font-size: 1.2em;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 @media (max-width: 768px) {

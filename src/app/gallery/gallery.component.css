@@ -1,3 +1,4 @@
+/* src/app/gallery/gallery.component.css */
 .gallery-container {
   max-width: 1400px;
   margin: 0 auto;
@@ -12,14 +13,14 @@
 
 .gallery-title {
   font-size: 3em;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 15px;
   font-weight: 300;
 }
 
 .gallery-subtitle {
   font-size: 1.2em;
-  color: #666;
+  color: var(--text-secondary);
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -33,11 +34,11 @@
 }
 
 .artwork-card {
-  background: white;
-  border-radius: 12px;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition);
   cursor: pointer;
   text-decoration: none;
   color: inherit;
@@ -45,20 +46,21 @@
 
 .artwork-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  box-shadow: var(--shadow-lg);
 }
 
 .artwork-image-container {
   position: relative;
   height: 300px;
   overflow: hidden;
+  background-color: var(--color-neutral-light);
 }
 
 .artwork-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition);
 }
 
 .artwork-card:hover .artwork-image {
@@ -73,7 +75,7 @@
 
 .badge {
   padding: 6px 12px;
-  border-radius: 20px;
+  border-radius: var(--radius-xl);
   font-size: 0.8em;
   font-weight: 600;
   text-transform: uppercase;
@@ -81,13 +83,13 @@
 }
 
 .badge.sold {
-  background-color: #dc3545;
-  color: white;
+  background-color: var(--status-sold);
+  color: var(--text-light);
 }
 
 .badge.not-for-sale {
-  background-color: #6c757d;
-  color: white;
+  background-color: var(--status-unavailable);
+  color: var(--text-light);
 }
 
 .artwork-info {
@@ -97,18 +99,18 @@
 .artwork-title {
   font-size: 1.4em;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 8px;
 }
 
 .artwork-artist {
-  color: #666;
+  color: var(--text-secondary);
   font-style: italic;
   margin-bottom: 15px;
 }
 
 .artwork-description {
-  color: #555;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 20px;
   font-size: 0.95em;
@@ -118,23 +120,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-color);
   padding-top: 15px;
 }
 
 .artwork-dimensions {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 0.9em;
 }
 
 .artwork-price {
   font-weight: 600;
   font-size: 1.1em;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .artwork-price.available {
-  color: #28a745;
+  color: var(--status-available);
 }
 
 @media (max-width: 768px) {
