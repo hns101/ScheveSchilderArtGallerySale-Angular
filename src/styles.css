@@ -1,1 +1,126 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.css - Main Global Styles */
+/* ================================================== */
+/* Simple Color System with Abstract Names */
+/* ================================================== */
+
+:root {
+  /* ========================================
+     Core Color Palette (10 colors max)
+     Abstract naming to allow easy changes
+     ======================================== */
+
+  /* Primary Colors (main brand colors) */
+  --color-primary: #007bff;        /* Main action color */
+  --color-primary-dark: #0056b3;   /* Darker variant for hover states */
+
+  /* Secondary Colors (supporting colors) */
+  --color-secondary: #6c757d;      /* Secondary actions */
+  --color-accent: #28a745;         /* Success, prices, positive actions */
+
+  /* Neutral Colors (grays for text/backgrounds) */
+  --color-neutral-light: #f8f9fa;  /* Light backgrounds */
+  --color-neutral-soft: #e9ecef;   /* Borders, dividers */
+  --color-neutral-mid: #6c757d;    /* Secondary text */
+  --color-neutral-dark: #333333;   /* Primary text */
+
+  /* Semantic Colors (status/feedback) */
+  --color-danger: #dc3545;         /* Errors, sold items */
+  --color-warning: #ffc107;        /* Warnings, alerts */
+
+  /* ========================================
+     Applied Color Assignments
+     Map the 10 colors to actual usage
+     ======================================== */
+
+  /* Backgrounds */
+  --bg-main: var(--color-neutral-light);
+  --bg-card: #ffffff;
+  --bg-footer: var(--color-neutral-dark);
+
+  /* Text */
+  --text-primary: var(--color-neutral-dark);
+  --text-secondary: var(--color-neutral-mid);
+  --text-light: #ffffff;
+
+  /* Interactive Elements */
+  --link-color: var(--color-primary);
+  --link-hover: var(--color-primary-dark);
+  --button-primary: var(--color-primary);
+  --button-primary-hover: var(--color-primary-dark);
+  --button-secondary: var(--color-secondary);
+
+  /* Borders */
+  --border-color: var(--color-neutral-soft);
+  --border-focus: var(--color-primary);
+
+  /* Status Colors */
+  --status-sold: var(--color-danger);
+  --status-available: var(--color-accent);
+  --status-unavailable: var(--color-secondary);
+
+  /* Shadows (using rgba for transparency) */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.3);
+
+  /* Other Design Tokens */
+  --radius: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 20px;
+  --radius-full: 50%;
+  --transition: 0.3s ease;
+}
+
+/* ========================================
+   Global Base Styles
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-main);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-top: 0;
+}
+
+p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* Buttons Base */
+button {
+  font-family: inherit;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
