@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Botanische bloem",
+    "artist": "Monique D.",
+    "description": {
+      "en": "A beautiful botanical flower study",
+      "nl": "Een prachtig Botanische bloem studie."
+    },
+    "price": 225,
+    "sold": false,
+    "notForSale": false,
+    "mainImage": "BotanischeBloemAquarelMockup.png",
+    "detailImages": ["BotanischeBloemAquarel.jpeg", "BotanischeBloemAquarelCloseUp.jpg"],
+    "dimensions": "A4",
+    "material": "Aquarel on paper"
+  },
+  {
+    "id": 2,
+    "title": "The Smiling Corgi",
+    "artist": "Carolyne W.",
+    "description": {
+      "en": "A vibrant Corgi with a lovely smile.",
+      "nl": "Een stralende Corgi met een lieve glimlach."
+    },
+    "price": 450,
+    "sold": true,
+    "notForSale": false,
+    "mainImage": "TheSmilingCorgiMockUp.png",
+    "detailImages": ["TheSmilingCorgi.jpeg","TheSmilingCorgiCloseUp.jpg"],
+    "dimensions": "A4",
+    "material": "Oil on Canvas"
+  },
+  {
+    "id": 3,
+    "title": "Trupial",
+    "artist": "Daniëlle T.",
+    "description": {
+      "en": "A painting of curaçao troupial bird on an cactus.",
+      "nl": "Schilderij van een Curaçaose troepiaal op een cactus."
+    },
+    "price": 320,
+    "sold": false,
+    "notForSale": true,
+    "mainImage": "TrupialMockUp.png",
+    "detailImages": ["Trupial.jpg"],
+    "dimensions": "A4",
+    "material": "Oil on Canvas"
+  }
+]

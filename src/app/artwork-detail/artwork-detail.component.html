@@ -11,7 +11,7 @@
       <!-- Main Image -->
       <div class="main-image-container">
         <img
-          [src]="'assets/images/' + selectedImage"
+          [src]="'images/' + selectedImage"
           [alt]="artwork.title"
           class="main-image">
       </div>
@@ -19,7 +19,7 @@
       <!-- Thumbnail Gallery -->
       <div class="thumbnails" *ngIf="artwork.detailImages.length > 0">
         <img
-          [src]="'assets/images/' + artwork.mainImage"
+          [src]="'images/' + selectedImage"
           [alt]="artwork.title + ' - main'"
           class="thumbnail"
           [class.active]="selectedImage === artwork.mainImage"
@@ -27,7 +27,7 @@
 
         <img
           *ngFor="let image of artwork.detailImages"
-          [src]="'assets/images/' + image"
+          [src]="'images/' + image"
           [alt]="artwork.title + ' - detail'"
           class="thumbnail"
           [class.active]="selectedImage === image"
