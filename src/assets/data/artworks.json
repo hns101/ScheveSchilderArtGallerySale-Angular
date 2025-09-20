@@ -10,7 +10,7 @@
     "price": 150,
     "sold": false,
     "notForSale": false,
-    "mainImage": "artwork1.jpg",
+    "mainImage": "artwork1.png",
     "detailImages": ["artwork1_detail1.jpg", "artwork1_detail2.jpg"],
     "dimensions": "40x50 cm",
     "material": "Acrylic on canvas"

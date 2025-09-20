@@ -10,8 +10,8 @@
      ======================================== */
 
   /* Primary Colors (main brand colors) */
-  --color-primary: #007bff;        /* Main action color */
-  --color-primary-dark: #0056b3;   /* Darker variant for hover states */
+  --color-primary: #795b3d;        /* Main action color */
+  --color-primary-dark: #eccb71;   /* Darker variant for hover states */
 
   /* Secondary Colors (supporting colors) */
   --color-secondary: #6c757d;      /* Secondary actions */

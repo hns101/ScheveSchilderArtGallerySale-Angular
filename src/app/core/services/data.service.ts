@@ -14,7 +14,7 @@ export class DataService {
   private fallbackArtworks: Artwork[] = [
     {
       id: 1,
-      title: "A Sunny Day",
+      title: "Sunny Days",
       artist: "Scheve Schilder",
       description: {
         en: "A beautiful painting depicting a sunny day in the Dutch countryside.",
@@ -23,8 +23,8 @@ export class DataService {
       price: 150,
       sold: false,
       notForSale: false,
-      mainImage: "artwork1.jpg",
-      detailImages: ["artwork1_detail1.jpg", "artwork1_detail2.jpg"],
+      mainImage: "artwork1.png",
+      detailImages: ["artwork1_detail1.png", "artwork1_detail2.png"],
       dimensions: "40x50 cm",
       material: "Acrylic on canvas"
     },
@@ -39,7 +39,7 @@ export class DataService {
       price: null,
       sold: false,
       notForSale: true,
-      mainImage: "artwork2.jpg",
+      mainImage: "artwork2.png",
       detailImages: [],
       dimensions: "60x80 cm",
       material: "Oil on wood panel"
@@ -55,8 +55,8 @@ export class DataService {
       price: 200,
       sold: true,
       notForSale: false,
-      mainImage: "artwork3.jpg",
-      detailImages: ["artwork3_detail1.jpg"],
+      mainImage: "artwork3.png",
+      detailImages: ["artwork3_detail1.png"],
       dimensions: "50x70 cm",
       material: "Oil on canvas"
     }
