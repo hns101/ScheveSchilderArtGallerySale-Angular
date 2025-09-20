@@ -14,19 +14,19 @@ export class TranslationService {
       nav: { gallery: 'Gallery', about: 'About' },
       gallery: {
         title: 'Art Gallery',
-        subtitle: 'Discover the unique and vibrant world of Scheve Schilder\'s artwork'
+        subtitle: 'Discover the unique world of artworks from the members of Schilderschool De Scheve Schilder'
       },
       about: {
-        title: 'About the Artist',
-        subtitle: 'Discover the story behind Scheve Schilder\'s unique artistic journey',
+        title: 'About Schilderschool De Scheve Schilder',
+        subtitle: 'Discover the story behind Schilderschool De Scheve Schilder and its talented artists.',
         story: {
-          title: 'My Story',
-          paragraph1: 'Welcome to my artistic world! I\'m Scheve Schilder, a passionate artist from the Netherlands.',
-          paragraph2: 'Through my work, I aim to bring joy and inspiration to people\'s lives.'
+          title: 'Our Story',
+          paragraph1: 'Welcome to our artistic community! Schilderschool De Scheve Schilder is an art school in the Netherlands, founded and led by the passionate teacher, Scheve Schilder.',
+          paragraph2: 'Our mission is to guide and inspire new artists. This gallery showcases the unique work of our students, offering you a glimpse into their creative journeys.'
         },
         style: {
-          title: 'My Artistic Style',
-          description: 'My work spans various mediums including oil paintings, watercolors, and mixed media.'
+          title: 'Our Artistic Community',
+          description: 'Our students explore a wide range of mediums, including oil paintings, watercolors, mixed media, and more. This diversity reflects the individuality of each artist we mentor.'
         },
         contact: {
           title: 'Get in Touch',
@@ -46,7 +46,7 @@ export class TranslationService {
       modal: {
         title: 'Purchase Artwork',
         by: 'by',
-        processDescription: 'Fill in your details and click "Send via WhatsApp". Wait for a response from the artist, who will send you an invoice based on shipping costs and a payment link. Once payment is completed, the artist will ship the artwork to you.',
+        processDescription: 'Fill in your details and click "Send via WhatsApp". The artist will contact you to confirm the sale, arrange shipping costs, and provide a payment link. Once payment is completed, the artist will ship the artwork to you.',
         form: {
           name: 'Full Name',
           namePlaceholder: 'Enter your full name',
@@ -83,20 +83,20 @@ export class TranslationService {
     nl: {
       nav: { gallery: 'Galerij', about: 'Over' },
       gallery: {
-        title: 'Kunstgalerij',
-        subtitle: 'Ontdek de unieke en levendige wereld van Scheve Schilder\'s kunstwerken'
+        title: 'Kunstgalerie',
+        subtitle: 'Ontdek de unieke wereld van kunstwerken gemaakt door de leden van Schilderschool De Scheve Schilder.'
       },
       about: {
-        title: 'Over de Kunstenaar',
-        subtitle: 'Ontdek het verhaal achter Scheve Schilder\'s unieke artistieke reis',
+        title: 'Over Schilderschool De Scheve Schilder',
+        subtitle: 'Ontdek het verhaal achter Schilderschool De Scheve Schilder en zijn getalenteerde kunstenaars.',
         story: {
-          title: 'Mijn Verhaal',
-          paragraph1: 'Welkom in mijn artistieke wereld! Ik ben Scheve Schilder, een gepassioneerde kunstenaar uit Nederland.',
-          paragraph2: 'Door mijn werk probeer ik vreugde en inspiratie te brengen in het leven van mensen.'
+          title: 'Ons Verhaal',
+          paragraph1: 'Welkom bij onze artistieke gemeenschap! Schilderschool De Scheve Schilder is een kunstschool in Nederland, opgericht en geleid door de gepassioneerde docent, Scheve Schilder.',
+          paragraph2: 'Onze missie is het begeleiden en inspireren van nieuwe kunstenaars. Deze galerij toont het unieke werk van onze studenten en geeft u een kijkje in hun creatieve reis.'
         },
         style: {
-          title: 'Mijn Artistieke Stijl',
-          description: 'Mijn werk omvat verschillende media, waaronder olieverfschilderijen, aquarellen en mixed media.'
+          title: 'Onze Artistieke Gemeenschap',
+          description: 'Onze studenten verkennen een breed scala aan media, waaronder olieverfschilderijen, aquarellen, mixed media en meer. Deze diversiteit weerspiegelt de individualiteit van elke kunstenaar die we begeleiden.'
         },
         contact: {
           title: 'Neem Contact Op',
@@ -116,7 +116,7 @@ export class TranslationService {
       modal: {
         title: 'Kunstwerk Kopen',
         by: 'door',
-        processDescription: 'U vult uw adresgegevens in en klikt op "Verzenden via WhatsApp". Wacht op een antwoord van de kunstenaar, die u een factuur zal sturen op basis van de verzendkosten en een betalingslink. Zodra de betaling is voltooid, zal de kunstenaar het kunstwerk naar u opsturen.',
+        processDescription: 'U vult uw gegevens in en klikt op "Verzenden via WhatsApp". De kunstenaar zal contact met u opnemen om de aankoop te bevestigen, de verzendkosten te bepalen en een betaallink te sturen. Zodra de betaling is voltooid, zal de kunstenaar het kunstwerk naar u opsturen.',
         form: {
           name: 'Volledige Naam',
           namePlaceholder: 'Voer uw volledige naam in',

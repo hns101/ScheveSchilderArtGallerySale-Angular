@@ -12,7 +12,7 @@ import { TranslatePipe } from '../shared/pipes/translate.pipe';
     <div class="about-container">
       <div class="about-hero">
         <div class="hero-content">
-          <img src="assets/images/artist-photo.jpg" alt="Scheve Schilder" class="artist-photo">
+          <img src="images/scheveschildersign.png" alt="Scheve Schilder" class="artist-photo">
           <div class="hero-text">
             <h1>{{ 'about.title' | translate }}</h1>
             <p class="lead">{{ 'about.subtitle' | translate }}</p>
@@ -68,11 +68,8 @@ import { TranslatePipe } from '../shared/pipes/translate.pipe';
     }
 
     .artist-photo {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      height: 270px;
+      rotate: 9deg;
     }
 
     .hero-text h1 {
@@ -92,7 +89,7 @@ import { TranslatePipe } from '../shared/pipes/translate.pipe';
       background: white;
       padding: 40px;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
 
     .about-section {
@@ -104,10 +101,10 @@ import { TranslatePipe } from '../shared/pipes/translate.pipe';
     }
 
     .about-section h2 {
-      color: #007bff;
+      color: #644e44;
       font-size: 1.5em;
       margin-bottom: 20px;
-      border-bottom: 2px solid #007bff;
+      border-bottom: 2px solid #644e44;
       padding-bottom: 10px;
     }
 
@@ -128,7 +125,7 @@ import { TranslatePipe } from '../shared/pipes/translate.pipe';
     }
 
     .btn-primary {
-      background-color: #007bff;
+      background-color: #644e44;
       color: white;
       border: none;
       padding: 12px 25px;
@@ -142,9 +139,9 @@ import { TranslatePipe } from '../shared/pipes/translate.pipe';
     }
 
     .btn-primary:hover {
-      background-color: #0056b3;
+      background-color: #644e44;
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+      box-shadow: 0 4px 15px #644e44;
     }
 
     @media (max-width: 768px) {

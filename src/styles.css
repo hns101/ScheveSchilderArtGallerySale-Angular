@@ -10,7 +10,7 @@
      ======================================== */
 
   /* Primary Colors (main brand colors) */
-  --color-primary: #795b3d;        /* Main action color */
+  --color-primary: #755739;        /* Main action color */
   --color-primary-dark: #6e4e39;   /* Darker variant for hover states */
 
   /* Secondary Colors (supporting colors) */
@@ -35,6 +35,7 @@
   /* Backgrounds */
   --bg-main: var(--color-neutral-light);
   --bg-card: #ffffff;
+  --bg-header: #b29782;
   --bg-footer: var(--color-neutral-dark);
 
   /* Text */

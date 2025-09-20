@@ -1,6 +1,6 @@
 /* src/app/shared/components/header/header.component.css */
 .header {
-  background-color: var(--bg-card);
+  background-color: var(--bg-header);
   box-shadow: var(--shadow-sm);
   position: sticky;
   top: 0;
@@ -14,20 +14,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
 }
 
-.logo {
-  font-size: 1.8em;
-  font-weight: bold;
-  color: var(--text-primary);
-  cursor: pointer;
-  margin: 0;
-  transition: color var(--transition);
-}
-
-.logo:hover {
-  color: var(--color-primary);
+.logo-image {
+  height:120px;
 }
 
 .nav-list {
@@ -36,11 +26,12 @@
   margin: 0;
   padding: 0;
   gap: 30px;
+  align-items: center;
 }
 
 .nav-link {
   text-decoration: none;
-  color: var(--text-secondary);
+  color: var(--color-neutral-light);
   font-weight: 500;
   transition: color var(--transition);
   padding: 5px 0;
@@ -66,7 +57,7 @@
   font-size: 0.9em;
   border-radius: var(--radius);
   transition: all var(--transition);
-  color: var(--text-secondary);
+  color: var(--color-neutral-soft);
 }
 
 .lang-btn:hover {

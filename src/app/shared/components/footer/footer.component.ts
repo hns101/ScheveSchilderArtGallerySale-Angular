@@ -11,22 +11,8 @@ import { TranslatePipe } from '../../pipes/translate.pipe';
       <div class="container">
         <div class="footer-content">
           <div class="footer-section">
-            <h3>{{ 'footer.contact' | translate }}</h3>
-            <p>{{ 'footer.artist' | translate }}: Scheve Schilder</p>
-            <p>Email: info@scheveschilder.nl</p>
-          </div>
-
-          <div class="footer-section">
-            <h3>{{ 'footer.followUs' | translate }}</h3>
-            <div class="social-links">
-              <a href="#" class="social-link">Instagram</a>
-              <a href="#" class="social-link">Facebook</a>
-            </div>
-          </div>
-
-          <div class="footer-section">
             <p class="copyright">
-              © 2025 Scheve Schilder. {{ 'footer.allRightsReserved' | translate }}
+              © {{ currentYear }} Schilderschool De Scheve Schilder
             </p>
           </div>
         </div>
@@ -37,7 +23,7 @@ import { TranslatePipe } from '../../pipes/translate.pipe';
     .footer {
       background-color: #333;
       color: white;
-      padding: 40px 0 20px;
+      padding: 20px 0 20px;
       margin-top: 50px;
     }
 
@@ -99,4 +85,6 @@ import { TranslatePipe } from '../../pipes/translate.pipe';
     }
   `]
 })
-export class FooterComponent { }
+export class FooterComponent {
+  currentYear: number = new Date().getFullYear();
+}
