@@ -1,14 +1,25 @@
-<!-- src/app/gallery/gallery.component.html -->
+<!-- src/app/gallery/gallery.component.html (UPDATED) -->
 <div class="gallery-container">
   <div class="hero-section">
     <h1 class="gallery-title">{{ 'gallery.title' | translate }}</h1>
     <p class="gallery-subtitle">{{ 'gallery.subtitle' | translate }}</p>
   </div>
 
+  <!-- Filters Component -->
+  <app-gallery-filters [allArtworks]="allArtworks"></app-gallery-filters>
+
+  <!-- Results Count -->
+  <div class="results-info">
+    <p class="results-count">
+      Showing <strong>{{ resultCount }}</strong> artwork{{ resultCount !== 1 ? 's' : '' }}
+    </p>
+  </div>
+
+  <!-- Artworks Grid -->
   <div class="artworks-grid">
     <div
       class="artwork-card"
-      *ngFor="let artwork of artworks$ | async"
+      *ngFor="let artwork of filteredArtworks$ | async"
       [routerLink]="['/artworks', artwork.id]">
 
       <div class="artwork-image-container">
@@ -42,5 +53,11 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- No Results Message -->
+  <div class="no-results" *ngIf="resultCount === 0">
+    <p>No artworks found matching your filters.</p>
+    <p>Try adjusting your search criteria.</p>
   </div>
 </div>
