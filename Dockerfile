@@ -17,22 +17,26 @@ RUN npm ci
 COPY . .
 
 # Build the application for production
-RUN npm run build
+RUN npm run build --prod
 
-# List the dist directory to see the actual structure
-RUN ls -la /app/dist/
+# Debug: Show what was built
+RUN echo "=== Contents of /app/dist ===" && \
+    find /app/dist -type f -name "*.html" -o -name "*.js" -o -name "*.css" | head -20
 
 # Production stage
 FROM nginx:alpine AS production
 
+# Remove default nginx static assets
+RUN rm -rf /usr/share/nginx/html/*
+
 # Copy custom nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
 
-# Copy built application from build stage (handle different Angular versions)
-COPY --from=build /app/dist/ /usr/share/nginx/html/
+# Copy built application from build stage
+# Use the correct path based on your build output
+COPY --from=build /app/dist/ScheveSchilderBackyardSale/browser/ /usr/share/nginx/html/
 
-# Copy public assets (images, data)
-COPY --from=build /app/public /usr/share/nginx/html
+# No need to copy public assets separately since they're already in the browser folder
 
 # Expose port 80
 EXPOSE 80
