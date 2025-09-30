@@ -1,0 +1,111 @@
+<!-- src/app/gallery/components/gallery-filters/gallery-filters.component.html -->
+<div class="filters-container">
+  <!-- Search Bar -->
+  <div class="search-section">
+    <div class="search-bar">
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        (ngModelChange)="onSearchChange()"
+        placeholder="Search by title, artist, or description..."
+        class="search-input">
+      <span class="search-icon">🔍</span>
+    </div>
+  </div>
+
+  <!-- Filter Toggle Button (Mobile) -->
+  <button class="filter-toggle-btn" (click)="toggleFilters()">
+    <span>{{ showFilters ? '✕ Hide Filters' : '☰ Show Filters' }}</span>
+    <span class="filter-count" *ngIf="hasActiveFilters()">
+      {{ selectedMaterials.length + selectedDimensions.length + (selectedSortBy ? 1 : 0) }}
+    </span>
+  </button>
+
+  <!-- Filters Panel -->
+  <div class="filters-panel" [class.show]="showFilters">
+    <div class="filters-grid">
+
+      <!-- Sort By -->
+      <div class="filter-group">
+        <label class="filter-label">Sort By</label>
+        <select
+          [(ngModel)]="selectedSortBy"
+          (ngModelChange)="onSortChange()"
+          class="filter-select">
+          <option value="">Default</option>
+          <option value="title">Title (A-Z)</option>
+          <option value="artist">Artist (A-Z)</option>
+          <option value="price-asc">Price (Low to High)</option>
+          <option value="price-desc">Price (High to Low)</option>
+        </select>
+      </div>
+
+      <!-- Price Range -->
+      <div class="filter-group">
+        <label class="filter-label">
+          Price Range: €{{ priceMin }} - €{{ priceMax }}
+        </label>
+        <div class="price-range-inputs">
+          <input
+            type="number"
+            [(ngModel)]="priceMin"
+            (ngModelChange)="onPriceRangeChange()"
+            [min]="priceRange.min"
+            [max]="priceRange.max"
+            class="price-input"
+            placeholder="Min">
+          <span class="price-separator">-</span>
+          <input
+            type="number"
+            [(ngModel)]="priceMax"
+            (ngModelChange)="onPriceRangeChange()"
+            [min]="priceRange.min"
+            [max]="priceRange.max"
+            class="price-input"
+            placeholder="Max">
+        </div>
+      </div>
+
+      <!-- Materials -->
+      <div class="filter-group" *ngIf="availableMaterials.length > 0">
+        <label class="filter-label">Materials</label>
+        <div class="checkbox-group">
+          <label
+            *ngFor="let material of availableMaterials"
+            class="checkbox-label">
+            <input
+              type="checkbox"
+              [checked]="isMaterialSelected(material)"
+              (change)="onMaterialChange(material, $event)"
+              class="checkbox-input">
+            <span class="checkbox-text">{{ material }}</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Dimensions -->
+      <div class="filter-group" *ngIf="availableDimensions.length > 0">
+        <label class="filter-label">Dimensions</label>
+        <div class="checkbox-group">
+          <label
+            *ngFor="let dimension of availableDimensions"
+            class="checkbox-label">
+            <input
+              type="checkbox"
+              [checked]="isDimensionSelected(dimension)"
+              (change)="onDimensionChange(dimension, $event)"
+              class="checkbox-input">
+            <span class="checkbox-text">{{ dimension }}</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reset Button -->
+    <div class="filter-actions" *ngIf="hasActiveFilters()">
+      <button class="reset-btn" (click)="resetFilters()">
+        Clear All Filters
+      </button>
+    </div>
+  </div>
+</div>
